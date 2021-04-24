@@ -114,6 +114,12 @@ function offsetDate(offset){
     var hour = d.getUTCHours();
     var min = d.getUTCMinutes();
     $('.date').text('Time Zone: ' +month +"/"+date +'/' + year + ' ' +hour + ":" + min);
+    if (hour>18 || hour<6) {
+    $('.green').css('background-image', 'url("asset/img/night.jpeg")');
+    $('.green').css('color', 'white');
+    } else {
+    $('.green').css('background-image', 'url("asset/img/day.webp")');
+    }
 }
 
 
